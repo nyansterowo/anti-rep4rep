@@ -1,0 +1,30 @@
+{
+  "name": "anti-plus-rep",
+  "version": "0.0.1",
+  "description": "Code to fight against spammers who ask for reciprocal +rep.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "perssBest",
+    "nyansterowo.",
+    "anti-plus-rep",
+    "non-spam-steam",
+    "stop-spam-in-comments-steam",
+    "delete-rep4rep-comments",
+    "anti-rep4rep"
+  ],
+  "author": "perssBest",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "fs": "0.0.1-security",
+    "html2json": "^1.0.2",
+    "node-fetch": "^2.6.1",
+    "ora": "^5.4.1",
+    "require-dir": "^1.2.0",
+    "steam-totp": "^2.1.1",
+    "steam-user": "^4.19.10"
+  }
+}
