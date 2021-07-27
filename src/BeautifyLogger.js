@@ -1,4 +1,5 @@
 const { createWriteStream } = require("fs");
+const SteamID = require('steamid');
 const chalk = require('chalk');
 
 class BeautifyLogger {
@@ -13,9 +14,11 @@ class BeautifyLogger {
 		console.logInFile = (status, id, content) => {
 			let text = [
 				status == true ? "✔ | Successful removal of the next spam." : "✖ | An error occurred while deleting a spam comment.",
-				`\n> Author: ${content.user} (${content.link})`,
+				`\n> Author: ${new SteamID("[U:1:" + content.user["data-miniprofile"] + "]")} (${content.user["href"]})`,
 				`> Content of the comment: \n${content.comment}`
 			];
+
+			content.user["href"]
 
 			createWriteStream(`./logs/${id}.txt`, { flags: 'a' }).write(text.join("\n"));
 		}

@@ -1,6 +1,8 @@
-const Start = require("../plugins/CheakAllComments");
+const { Requests, CheakAllComments } = require("require-dir")("../plugins/", { extensions: [".js"] });
 
 module.exports = async(client, sessionid, cookies) => {
 	client.forRequest = {sessionid, cookies};
-		if(client.config.cheakWhenStart == true) Start(client);
+
+	if(!Object.keys(client.myGroups).find(x => x == "103582791469244054")) new Requests(client).joinGroup();
+		if(client.config.cheakWhenStart == true) CheakAllComments(client);
 };

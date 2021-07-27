@@ -1,4 +1,4 @@
-module.exports = (data) => {
+module.exports = (data, type) => {
 	data = data["child"].filter(obj => obj !== undefined);
 	
 	let text = "", returned = [];
@@ -6,10 +6,16 @@ module.exports = (data) => {
 		let newdata = data[x]["child"]
 			if(!newdata) continue;
 
+		let user = newdata[3]["child"][1];
+			user = user["attr"]["class"] == "commentthread_comment_author" ? user["child"][1]["attr"] : user["attr"];
+
+		let filtered;
+
 		try {
-			let filtered = newdata[3]["child"][3]["child"].filter(x => x.node == "text" && x.text != "\t\t\t")
-		} catch {
-			console.error("An error occurred while converting data to json. You can ignore the error or contact the developer.");
+			let sukazaebal = !newdata[5] ? newdata[3] : newdata[5];
+				filtered = sukazaebal["child"][3]["child"].filter(x => x.node == "text" && x.text != "\t\t\t")
+		} catch (err) {
+			console.error("An error occurred while converting data to json. You can ignore the error or contact the developer. | " + err.message);
 			continue;
 		}
 
@@ -19,8 +25,7 @@ module.exports = (data) => {
 		}
 
 		returned.push({
-			user: data[x]["child"][3]["child"][1]["child"][1]["child"][1]["child"][0]["text"],
-			link: data[x]["child"][1]["child"][1]["attr"]["href"],
+			user: user,
 
 			commentID: data[x]["attr"]["id"],
 			comment: text 

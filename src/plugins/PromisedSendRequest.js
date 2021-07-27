@@ -4,14 +4,14 @@ class PromisedSendRequest {
 	constructor() {
 		// ?
 	}
-	req(url, params) {
+	req(url, params, json = true) {
 		return new Promise((resolve, reject) => {
-			let req = request(url, params).then(x => 
-				x.json()
-					.then(res => 
-						resolve(JSON.parse(JSON.stringify(res)))
+			let req = request(url, params, json).then(x => {
+				x = json ? x.json() : x.text()
+					x.then(res => 
+						resolve(json ? JSON.parse(JSON.stringify(res)) : res)
 						)
-					);
+					});
 		})
 	}
 }

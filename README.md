@@ -1,6 +1,6 @@
 <div align="center" markdown=1>
 	<p align="center"><img width=45% src="https://i.ibb.co/0rgFYG9/3.png"></p>
-	<strong>An easy to use script that prevents *rep4rep* in your guides. (Steam)</strong>
+	<strong>An easy to use script that prevents *rep4rep* in the comment of your guides/groups. (Steam)</strong>
 	<br>Check out the setup and start using<br>
 	<p></p>
 </div>
@@ -66,34 +66,56 @@ Next, you need to open the code editor, and then open the `config.js` file. <br>
 
 If we want the script to check old comments when enabled (which were left while the script was not included), then we need this line: `(optional)`
 ```js
-5 | cheakWhenStart: true, // if you want to turn it off, set the value to false.
+5 | cheakWhenStart: true, // if you want to turn it off, set the value to 'false'.
 ```
+
+<br>
+
+If you want reports to be sent to users whose comments have been deleted, then this line is for you:
+```js
+6 | reportAfterDelete: true, // if you want to turn it off, set the value to 'false'.
+````
 
 <br><br>
 
 
-What guides the script will follow: `(necessarily)`
+What guides the script will follow: `(?)`
 ```js
-6 | manuals: [ 
-7 |	2537839098, 2541938934, // etc.
-8 | ],
+8  | manuals: [ 
+9  |	2537839098, 2541938934, // etc.
+10 | ],
+```
+
+<br>
+
+Unique ending of the group in which comments will be tracked: `(?)`
+```js
+12 | groups: [
+13 |	// ...
+14 |	"nevzorl",
+15 | ]
 ```
 
 <br>
 
 **Where can I get the ID of your guide?**
 - Go to your manual, and in the line where the link is located, you see the link itself, and at the end of it the numbers (this is the ID of the manual.) <br>
-![?](https://media.discordapp.net/attachments/857908308303937536/867332964799348737/msedge_4LIU4Ev4ud.png?width=1039&height=224)
+![?](https://i.ibb.co/BqPSKdm/Share-X-YP2mbxf-E7-D.png)
 
+<br><br>
+
+**Where can I find this group id?**
+- Go to the very main page of your group, with in the search bar you see this: <br>
+![?](https://i.ibb.co/G2tbtk9/msedge-gs0-RMr-L43-V.png)
 
 <br><br><br>
 
 **You can change the game that your account will play when the script is running:** `(Not necessarily a change.)`
 ```js
-12 | statusSettings: { 
-13 |   [...]
-14 |   playingGame: "🤬 stop-rep4rep (by perssBest)" 
-15 | },
+18 | statusSettings: { 
+19 |   [...]
+20 |   playingGame: "🤬 stop-rep4rep (by perssBest)" 
+21 | },
 ```
 
 
@@ -101,11 +123,11 @@ What guides the script will follow: `(necessarily)`
 
 **And the last step of configuring the config, you must specify your data to enter the steam.** `(necessarily)`
 ```js
-18 | loginSettings: {
-19 |   accountName: 'ur username', // replace this
-20 |   password: 'ur pass', // replace this, too
-21 |   [...]
-23 | },
+24 | loginSettings: {
+25 |   accountName: 'ur username', // replace this
+26 |   password: 'ur pass', // replace this, too
+27 |   [...]
+29 | },
 ```
 
 <br>
@@ -126,7 +148,7 @@ Here is an example of how to include the script correctly: <br>
 
 <br>
 
-💢 **If you see any error, then you did something wrong. If you need help, write to Steam's private messages.**
+💢 **If you see any error, then you did something wrong. If you need help, please post your problem under [this manual](https://steamcommunity.com/sharedfiles/filedetails/?id=2553235394).**
 
 <br>
 
@@ -163,4 +185,4 @@ ENG: Choose the one that's on the list and write in my profile, I will answer th
 ## 🎉 Conclusion
 This concludes the documentation. I want to say a huge thank you to [Jmopel](https://github.com/Jmopel) for helping with the development of the code. <br>
 In the future, it is possible that an auto-reporting system will be implemented and the checking of old messages will also be improved. <br>
-If you have any **questions/problems** - write to Steam or you can open the issues
+If you have any **questions/problems** - post your problem under [this manual](https://steamcommunity.com/sharedfiles/filedetails/?id=2553235394). or you can open the issues

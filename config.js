@@ -3,10 +3,16 @@ const { generateAuthCode } = require('steam-totp');
 module.exports = {
 
 	cheakWhenStart: true, // Check old comments when including a script? (only 10)
+	reportAfterDelete: true, // Send complaints to users whose comments have been removed.
+
 	manuals: [ // List of ID YOUR guides
-		2537839098, 
+	  	2537839098, 2541938934, // etc..
 	],
 
+	groups: [ // List of your groups | (Enter not the name of the group, but the end of the link) https://steamcommunity.com/groups/nevzorl
+																																    // ^^
+		"nevzorl", // etc..                            
+	],
 
 
 	statusSettings: { 
