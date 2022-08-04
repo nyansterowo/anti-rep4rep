@@ -8,8 +8,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![node.js](https://img.shields.io/badge/node.js-v14-green?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Star](https://img.shields.io/badge/-Give%20this%20repo%20a%20star!-red?style=flat-square)](https://github.com/nevzorl/anti-rep4rep)
-[![Steam](https://img.shields.io/badge/Steam-%2Fnyansterowo-blue?style=flat-square&logo=steam)](https://steamcommunity.com/id/nyansterowo/)
-[![Discord](https://img.shields.io/discord/732115887246671913?color=8697F6&label=Discord&logoColor=white&style=flat-square&logo=discord)](https://discord.gg/RPb2KXN)
 [![Donate](https://img.shields.io/badge/donate-%241-orange?style=flat-square)](https://www.donationalerts.com/r/reedi)
 <p align="center">Click on a badge to learn more.</p>
 
