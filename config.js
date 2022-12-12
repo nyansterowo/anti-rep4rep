@@ -33,6 +33,6 @@ module.exports = {
 
 
 	// dont touch this, u can break this shitcode.
-	fuckingRegexp: /(\+|)rep/gi, // \s maybe idk im retard.
+	fuckingRegexp: /(\+|-)rep/gi, // \s maybe idk im retard.
 	numberRegexp: /\d+/g, // number regex
 } 
